@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html style='height: 100%; width: 100%'>
+<head leng="en">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script type="text/javascript">
+		const colorList = [
+			[0, 0, 0],
+			[255, 255, 255],
+			[170, 170, 170],
+			[85, 85, 85],
+			[254, 211, 199],
+			[255, 196, 206],
+			[250, 172, 142],
+			[255, 139, 131],
+			[244, 67, 54],
+			[233, 30, 99],
+			[226, 102, 158],
+			[156, 39, 176],
+			[103, 58, 183],
+			[63, 81, 181],
+			[0, 70, 112],
+			[5, 113, 151],
+			[33, 150, 243],
+			[0, 188, 212],
+			[59, 229, 219],
+			[151, 253, 220],
+			[22, 115, 0],
+			[55, 169, 60],
+			[137, 230, 66],
+			[215, 255, 7],
+			[255, 246, 209],
+			[248, 203, 140],
+			[255, 235, 59],
+			[255, 193, 7],
+			[255, 152, 0],
+			[255, 87, 34],
+			[184, 63, 39],
+			[121, 85, 72],
+		];
+		try{
+			var win = nw.Window.get();
+			setTimeout(function(){
+				win.show();
+			}, 300);
+		}
+		catch(error){
+			console.log('Switched to Website Mode');
+		}
+	</script>
+	<script src="./scripts/jquery.min.js"></script>
+	<script src="./scripts/heap.js"></script>
+	<script src="./scripts/image.js"></script>
+	<script src="./scripts/paint.js"></script>
+	<style type="text/css">
+		::-webkit-scrollbar{
+			width: 8px;
+			height: 8px;
+		}
+		::-webkit-scrollbar-thumb{
+			border-radius: 2px;
+		}
+		::-webkit-scrollbar-corner{
+			display: none;
+		}
+		::-webkit-scrollbar{
+			transition: 0.3s;
+		}
+		::-webkit-scrollbar:hover{
+		    background-color: #666;
+		}
+		::-webkit-scrollbar-thumb{
+		    background-color: #888;
+		}
+	    *{
+	        scrollbar-color: dark;
+	        scrollbar-width: thin;
+	    }
+	    ::selection{
+	    	background: #555;
+	    }
+	    html, body{
+	    	margin: 0px;
+	    }
+	    canvas{
+	    	-webkit-app-region: no-drag;
+	    }
+	</style>
+</head>
+<body style="height: 100%; width: 100%; margin: 0px; font-family: 'Consolas','Fira Code','Source Code Pro','Lucida Console','Cascadia Code','Ubuntu Mono',monospace, sans-serif; color: white;">
+	<div style='height: 100%; width: 100%; background: #000; display: flex; flex-direction: column; border-radius: 5px; overflow: hidden;'>
+		<div style='-webkit-app-region: drag; height: 30px; background: #111'><div style='display: grid; place-items: center; float: left; margin-left: 10px; height: 100%'>Luogu PaintBoard Shell</div></div>
+		<div style='flex: 1; font-size: 16px; padding: 5px; word-break: break-all; white-space: pre-wrap; overflow-y: auto;' spellcheck="false" autocapitalize="off" autocomplete="off" autocorrect="off" class='console'></div>
+		<input style='height: 24px; width: calc(100% - 10px); padding: 5px; font-size: 16px; outline: 0; border: 0; background: #222; font-family: inherit; color: inherit;' spellcheck="false" autocapitalize="off" autocomplete="off" autocorrect="off"></input>
+	</div>
+	<div style='position: absolute; right: 10px; bottom: 44px; background: rgba(55, 55, 55, 0.5); word-break: break-all; white-space: pre-wrap; width: 220px; height: 120px; border-radius: 5px; padding: 5px; display: grid; place-items: center; user-select: none;' class='actionBlock'>No action</div>
+	<script src="./scripts/main.js"></script>
+</body>
+</html>

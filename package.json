@@ -1,0 +1,38 @@
+{
+    "version": "1.0",
+    "keywords": [
+        "Luogu",
+        "node-webkit"
+    ],
+    "name": "Luogu Paintboard GUI",
+    "description": "Luogu Paintboard GUI developed by Nw.js",
+    "author": "tiger2005 <3478556308@qq.com>",
+    "window": {
+        "fullscreen": false,
+        "title": "Luogu Paintboard GUI",
+        "resizable": true,
+        "show_in_taskbar": true,
+        "width": 1060,
+        "height": 658,
+        "min_width": 400,
+        "min_height": 300,
+        "toolbar": true,
+        "as_desktop": false,
+        "position": "center",
+        "always_on_top": false,
+        "frame": false,
+        "kiosk": false,
+        "show": false,
+        "transparent": true,
+        "icon": "favicon.png"
+    },
+    "single-instance": true,
+    "main": "index.html",
+    "chromium-args": "--disable-web-security --user-data-dir --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-renderer-backgrounding",
+    "double-tap-to-zoom-enabled": false,
+    "webkit": {
+        "page-cache": false,
+        "plugin": true,
+        "java": true
+    }
+}
